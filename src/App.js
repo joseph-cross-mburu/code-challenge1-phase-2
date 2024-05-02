@@ -1,8 +1,8 @@
-import React from 'react'; 
-import Form from './Form';
-import Table from './Table';
+import React from 'react';
+import TransactionForm from './TransactionForm';
+import TransactionTable from './TransactionTable';
 import { useState } from 'react';
-import Search from "./search"
+import Search from './search';
 
 
 
@@ -16,11 +16,11 @@ function App() {
   return (
     <div>
       <header>
-        <h1 style={{background:"purple",textAlign:"center"}}>The Royal Bank of Flatiron</h1>
-  <Search/>
+        <h1 style={{ background: "purple", textAlign: "center" }}>The Royal Bank of Flatiron</h1>
+        <Search />
       </header>
-      <Form onSubmit={handleFormSubmitButton} />
-      <Table formData={formDataInput} />
+      <TransactionForm onSubmit={handleFormSubmitButton} />
+      <TransactionTable formData={formDataInput} />
     </div>
   );
 }
